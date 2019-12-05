@@ -10,3 +10,8 @@
 .card .descripcion {
   font-size: x-small;
 }
+
+.card .descripcion:hover {
+  font-size: large;
+  zoom: 1;
+}
