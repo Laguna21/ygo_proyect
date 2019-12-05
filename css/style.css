@@ -1,0 +1,12 @@
+.card {
+  max-width: 20rem;
+}
+.card img {
+  max-width: 15rem;
+  align-self: center;
+  padding: 7px;
+}
+
+.card .descripcion {
+  font-size: x-small;
+}
