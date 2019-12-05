@@ -28,7 +28,9 @@ function mostrarMonstruos(lista) {
   console.log(lista);
   borrarImagenes();
   lista.forEach(item => {
-    ITEMS.contenedorImagenes.innerHTML += `  <div class="card m-3 text-center" id="${item.id}">
+    ITEMS.contenedorImagenes.innerHTML += `  <div class="card m-3 text-center" id="${
+      item.id
+    }">
     <h3 class="card-header">${item.name}</h3>
     <img src="${item.image_url_small}">
     <div class="card-body">
@@ -37,11 +39,14 @@ function mostrarMonstruos(lista) {
       </p>
     </div>
     <div class="card-body">
-    <p class="card-text">Atk: ${item.atk} // Def: ${item.def}</p>
+    ${tipoDeCarta(item)}
+    
     </div>
     <div class="card-footer">
     <h6 class="card-subtitle text-muted">Precio: ${item.amazon_price} $</h6> 
-    <button class="btn btn-danger" onclick="borrarTarjeta(${item.id})">Borrar Carta</button>
+    <button class="btn btn-danger" onclick="borrarTarjeta(${
+      item.id
+    })">Borrar Carta</button>
     </div>
   </div>`;
   });
@@ -65,4 +70,19 @@ function errorAlBuscarCartas(err) {
 
 function borrarTarjeta(tarjeta) {
   document.getElementById(tarjeta).remove();
+}
+
+function tipoDeCarta(carta) {
+  switch (carta.type) {
+    case "Spell Card":
+      return `<p class="card-text">${carta.type}</p>`;
+      break;
+    case "Trap Card":
+      return `<p class="card-text">${carta.type}</p>`;
+      break;
+    default:
+      return `<p class="card-text">${carta.type}</p>
+      <p class="card-text">Atk: ${carta.atk} // Def: ${carta.def}</p>`;
+      break;
+  }
 }
