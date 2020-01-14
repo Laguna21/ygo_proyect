@@ -7,4 +7,4 @@ Consulta DB de ygo y mostrarlo por pantalla con ES6 - ES7
 <li>CSS3</li>
 <li>Bootstrap</li>
 </ul>
-<p>Ejemplo de consulta asincrona.</p>
+<p>Ejemplo de consulta asincrona. Podes acceder desde <a href="https://laguna21.github.io/ygo_proyect/">YGO-PROYECT</a>.</p>
